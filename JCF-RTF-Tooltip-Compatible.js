@@ -22,8 +22,8 @@ $(function() { //Recent topics filter, Dusty@forum.jcink.com
 				datestr = t.find('.recent-topics-date').text();
 			$(tdrop).append('<li><a href="' + topicurl + '" class="' + tooltype + '" data-tooltip="' + datestr + '">' + topicname + '</a> by <a href="' + authurl + '">' + authname + '</a></li>')
 		})
-		sessionStorage.setItem('recenterest', JSON.stringify($(tdrop).html()))
+		localStorage.setItem('recenterest', JSON.stringify($(tdrop).html()))
 	} else {
-		$(tdrop).html(JSON.parse(sessionStorage.getItem('recenterest')))
+		$(tdrop).html(JSON.parse(localStorage.getItem('recenterest')))
 	}
 })
