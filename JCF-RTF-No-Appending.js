@@ -11,8 +11,8 @@ $(function() { //Recent topics filter, Dusty@forum.jcink.com
 			$('#recent-topics tr.rtid' + exclusions[i] + '').remove();
 		}
 		$('#recent-topics table tbody tr:nth-of-type(' + rtmax + ') ~ tr').remove()
-		sessionStorage.setItem('recenterest', JSON.stringify($('#recent-topics').html()))
+		localStorage.setItem('recenterest', JSON.stringify($('#recent-topics').html()))
 	} else {
-		$('#recent-topics').html(JSON.parse(sessionStorage.getItem('recenterest')))
+		$('#recent-topics').html(JSON.parse(localStorage.getItem('recenterest')))
 	}
 })
