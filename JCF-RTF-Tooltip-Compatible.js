@@ -1,7 +1,7 @@
 $(function() { //Recent topics filter, Dusty@forum.jcink.com
 	var exclusions = [0,1,2,3,4], //Forum IDs to be not included, unlimited
 		rtmax = 5, //Max number of displayed forums, after exclusions. Cannot exceed 15
-		tdrop = $('new-recent-topics-location'), //Location to append recent topics to
+		tdrop = '.new-topics-location', //Location to append recent topics to
 		tooltype = 'tooltip-right', //Tooltip compatibility
 		act = '<!-- |input_act| -->';
 	if (act === 'idx') {
