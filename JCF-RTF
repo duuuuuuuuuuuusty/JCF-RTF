@@ -1,6 +1,7 @@
+document.addEventListener('DOMContentLoaded', function () {
 	let excludeList = [0,1,2,3,4];
 	let topicMax = 2;
-	let appendLocation = '.non-index-cached-location';
+	let appendLocation = '.new-topics-location';
 
 	if ('<!-- |input_act| -->' === 'idx') {
 		let topicList = document.querySelectorAll('#recent-topics tr');
@@ -18,5 +19,6 @@
 
 		sessionStorage.setItem('cachedRecentTopics', JSON.stringify(document.querySelector('#recent-topics').innerHTML))
 	} else if (sessionStorage.getItem('cachedRecentTopics')) {
-		document.querySelector(appendLocation).innerHTML = JSON.parse(sessionStorage.getItem('cachedRecentTopics'))
+		document.querySelector(appendLocation).appendChild(JSON.parse(sessionStorage.getItem('cachedRecentTopics')))
 	}
+})
