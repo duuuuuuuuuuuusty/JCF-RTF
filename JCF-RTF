@@ -19,6 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		sessionStorage.setItem('cachedRecentTopics', JSON.stringify(document.querySelector('#recent-topics').innerHTML))
 	} else if (sessionStorage.getItem('cachedRecentTopics')) {
-		document.querySelector(appendLocation).appendChild(JSON.parse(sessionStorage.getItem('cachedRecentTopics')))
+		document.querySelector(appendLocation).innerHTML = JSON.parse(sessionStorage.getItem('cachedRecentTopics'))
 	}
 })
