@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 
 		for (var i=0;i<excludeList.length;i++) { // remove excluded forums
-			document.querySelectorAll('#recent-topics .rtid-'+i).forEach(e => e.parentNode.removeChild(e))
+			document.querySelectorAll('#recent-topics .rtid-'+excludeList[i]).forEach(e => e.parentNode.removeChild(e))
 		}
 		document.querySelectorAll('#recent-topics tr:nth-of-type('+topicMax+') ~ tr').forEach(e => e.parentNode.removeChild(e)) // Limit to topicMax
 
